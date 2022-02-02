@@ -1,38 +1,128 @@
+
+
 .App {
-  text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(80, 78, 76);
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.left-bar {
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: brown;
+    z-index: 5;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-div {
+    /* --screen-90: 100%-100px; */
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, #B6CCDA, #C8DCE5);
+    z-index: 2;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-menu-icon {
+    width: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.social-holder {
+    display: flex;
+    flex-direction: column;
+    color: #a3becf;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fb-icon, .tw-icon, .in-icon {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    /* margin-bottom: 1.5rem; */
 }
+
+.dektop-nav-bar {
+    z-index: 3;
+}
+
+.side-menu {
+    z-index: 4;
+    width: 40%;
+    background-color: chartreuse;
+}
+
+
+/* Apply for screen smaller than 767 px */
+@media screen and (max-width: 767px) {
+    /* .left-bar {
+        display: none;
+    } */
+    .App {
+        flex-direction: column-reverse;
+    }
+    .left-bar {
+        width: 100vw;
+        height: 81px;
+        bottom: 0%;
+        flex-direction: row;
+        padding-left: 1.5rem;
+        /* padding-right: 1.5rem; */
+    }
+    .main-div {
+        margin-bottom: 80px;
+    }
+    .social-holder {
+        flex-direction: row;
+        margin-right: 1.5rem;
+    }
+    .fb-icon, .tw-icon, .in-icon {
+        margin-right: 1.25rem;
+    }
+    .side-menu {
+        width: 60%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+    }
+    
+}
+
+/* Apply for screen larger than 768 px */
+@media screen and (min-width: 768px) {
+    .main-div {
+        width: calc(100% - 100px);
+        margin-left: 100px;
+    }
+    .App {
+        flex-direction: row;
+    }
+    .left-bar {
+        
+    }
+    .social-holder {
+        margin-bottom: 2.5rem;
+    }
+    .nav-menu-icon {
+        margin-top: 2.75rem;
+    }
+    .fb-icon, .tw-icon, .in-icon {
+        margin-bottom: 1.5rem;
+    }
+    .dektop-nav-bar {
+
+    }
+    .side-menu {
+        display: none;
+    }
+}
+
+
+/* padding-top: 2.25rem; */
+/* padding-bottom: 2.25rem; */
