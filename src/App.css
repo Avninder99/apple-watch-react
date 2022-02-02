@@ -13,21 +13,19 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    background-color: brown;
+    background-color: white;
     z-index: 5;
     justify-content: space-between;
     align-items: center;
 }
 
 .main-div {
-    /* --screen-90: 100%-100px; */
     display: flex;
     height: 100vh;
     width: 100%;
     border-radius: 1rem;
     background-image: linear-gradient(to right, #B6CCDA, #C8DCE5);
     z-index: 2;
-    
 }
 
 .nav-menu-icon {
@@ -44,7 +42,6 @@
 .fb-icon, .tw-icon, .in-icon {
     font-size: 1.8rem;
     line-height: 2.2rem;
-    /* margin-bottom: 1.5rem; */
 }
 
 .dektop-nav-bar {
@@ -54,15 +51,56 @@
 .side-menu {
     z-index: 4;
     width: 40%;
-    background-color: chartreuse;
+    background-color: white;
+    padding: 1rem 0;
 }
 
+.side-option-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    max-height: 400px;
+    margin-top: 40%;
+    padding: 25px 0;
+}
+
+.side-menu-options {
+    color: #ABC6D6;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 16px 0;
+}
+
+.side-menu-options:hover {
+    background-color: #EFF6FB;
+    color: #404354;
+    font-weight: 600;
+    
+}
+
+.side-menu-options-2 {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #404354;
+    background-color: #EFF6FB;
+    font-weight: 600;
+}
 
 /* Apply for screen smaller than 767 px */
 @media screen and (max-width: 767px) {
-    /* .left-bar {
-        display: none;
-    } */
     .App {
         flex-direction: column-reverse;
     }
@@ -85,7 +123,7 @@
         margin-right: 1.25rem;
     }
     .side-menu {
-        width: 60%;
+        width: 70%;
         position: fixed;
         left: 0;
         top: 0;
@@ -103,9 +141,9 @@
     .App {
         flex-direction: row;
     }
-    .left-bar {
+    /* .left-bar {
         
-    }
+    } */
     .social-holder {
         margin-bottom: 2.5rem;
     }
@@ -115,14 +153,16 @@
     .fb-icon, .tw-icon, .in-icon {
         margin-bottom: 1.5rem;
     }
-    .dektop-nav-bar {
+    /* .dektop-nav-bar {
 
-    }
+    } */
     .side-menu {
         display: none;
     }
 }
 
-
-/* padding-top: 2.25rem; */
-/* padding-bottom: 2.25rem; */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .side-menu {
+        width: 60%;
+    }
+}
