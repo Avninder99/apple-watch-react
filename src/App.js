@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './App.css';
-import Left_bar from './left_bar';
-import Main_section from './main_section';
-import Side_menu from './side_menu';
+import LeftBar from './left_bar';
+import MainSection from './main_section';
+import SideMenu from './side_menu';
 
 
 function App() {
@@ -17,19 +17,19 @@ function App() {
         <div className="App">
 
             {/* left bar is a seperate component */}
-            <Left_bar menuChanger={menuHandler}/>
+            <LeftBar menuChanger={menuHandler}/>
 
             {
                 openSideMenu && (width <= 768)
                     ?
-                        <Side_menu/>
+                        <SideMenu/>
                     :
                         ""
             }
             
 
             {/* main section is a seperate component */}
-            <Main_section/>
+            <MainSection/>
             
 
 
