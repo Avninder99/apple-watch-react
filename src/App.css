@@ -20,7 +20,7 @@
 }
 
 .main-div {
-    display: flex;
+    /* display: flex; */
     height: 100vh;
     width: 100%;
     border-radius: 1rem;
@@ -44,8 +44,32 @@
     line-height: 2.2rem;
 }
 
-.dektop-nav-bar {
+.desktop-nav-bar {
     z-index: 3;
+    padding: 1rem 0;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/* .desktop-nav-options {
+
+} */
+
+.desktop-link-holder {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.main-logo {
+    outline: none;
+    background: none;
+    border: none;
 }
 
 .side-menu {
@@ -99,6 +123,117 @@
     font-weight: 600;
 }
 
+.desktop-nav-links {
+    display: block;
+    color: white;
+    /* background-color: cadetblue; */
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-family: 'Poppins', sans-serif;
+    width: max-content;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.desktop-nav-links:hover {
+    font-weight: 600;
+    color: #a3becf;
+    background-color: white;
+    padding: 0.5rem 1.25rem;
+}
+
+.desktop-nav-links-2 {
+    display: block;
+    color: #a3becf;
+    background-color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-family: 'Poppins', sans-serif;
+    width: max-content;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#link-1, #link-2, #link-3, #link-4, #link-5 {
+    position: absolute;
+}
+
+#link-1 {
+    left: 25%;
+    top: -45px;
+}
+#link-2 {
+    left: 43%;
+    top: -45px;
+}
+#link-3 {
+    left: 66%;
+    top: -45px;
+}
+#link-4 {
+    left: 86%;
+    top: -45px;
+}
+#link-5 {
+    left: 110%;
+    top: -45px;
+}
+
+.left-side-nav {
+    /* width: max-content; */
+    width: 50%;
+}
+
+.right-side-nav {
+    position: absolute;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    margin-right: 4rem;
+}
+
+.right-icons {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+.main-logo-div {
+    max-width: min-content;
+    margin-left: 3rem;
+    margin-right: 0;
+}
+
+#search-bar {
+    background-color: cornflowerblue;
+    border-radius: 9999px 0 0 9999px;
+}
+
+#search-icon {
+    padding-right: 16px;
+    
+}
+
+#bag-icon {
+    border-left: rgba(255, 255, 255, 0.70) 2px solid;
+    padding: 0 22px;
+}
+
+.nav-holder {
+    display: flex;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .side-menu {
+        width: 60%;
+    }
+}
+
 /* Apply for screen smaller than 767 px */
 @media screen and (max-width: 767px) {
     .App {
@@ -110,7 +245,6 @@
         bottom: 0%;
         flex-direction: row;
         padding-left: 1.5rem;
-        /* padding-right: 1.5rem; */
     }
     .main-div {
         margin-bottom: 80px;
@@ -129,7 +263,12 @@
         top: 0;
         height: 100vh;
     }
-    
+    .desktop-link-holder {
+        display: none;
+    }
+    .right-side-nav {
+        margin-right: 2.2rem;
+    }
 }
 
 /* Apply for screen larger than 768 px */
@@ -141,9 +280,6 @@
     .App {
         flex-direction: row;
     }
-    /* .left-bar {
-        
-    } */
     .social-holder {
         margin-bottom: 2.5rem;
     }
@@ -153,16 +289,54 @@
     .fb-icon, .tw-icon, .in-icon {
         margin-bottom: 1.5rem;
     }
-    /* .dektop-nav-bar {
-
-    } */
     .side-menu {
         display: none;
     }
-}
-
-@media screen and (min-width: 600px) and (max-width: 768px) {
-    .side-menu {
-        width: 60%;
+    .desktop-nav-bar {
+        padding: 2.2rem 0;
+    }
+    .desktop-nav-links:hover {
+        font-weight: 600;
+        color: #a3becf;
+        background-color: white;
+        padding: 0.5rem 1.2rem;
+    }
+    .right-side-nav {
+        margin-right: 2.7rem;
+    }
+    .main-logo-div {
+        margin-left: 2rem;
+    }
+    #link-4 {
+        left: 88%;
+    }
+    #link-5 {
+        left: 116%;
     }
 }
+
+
+@media screen and (min-width: 1024px) {
+    .desktop-nav-links {
+        padding: 0.5rem 2rem;
+    }
+    .desktop-nav-links:hover {
+        color: #a3becf;
+        padding: 0.5rem 2rem;
+    }
+    .main-logo-div {
+        margin-left: 3.5rem;
+    }
+    .desktop-nav-links-2 {
+        padding: 0.5rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .main-logo-div {
+        margin-left: 5rem;
+    }
+    
+}
+
+
