@@ -3,7 +3,6 @@
 .App {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(80, 78, 76);
     display: flex;
 }
 
@@ -21,7 +20,8 @@
 
 .main-div {
     /* display: flex; */
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
     border-radius: 1rem;
     background-image: linear-gradient(to right, #B6CCDA, #C8DCE5);
@@ -254,33 +254,42 @@
     display: flex;
 }
 
-
-
 .main-div-content {
+    width: 100%;
+}
+
+.div-holder {
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: tomato;
 }
 
 .holder-1 {
     width: 55%;
-    background-color: violet;
     font-family: 'Poppins', sans-serif;
     color: white;
+    padding: 4.5rem 0 0 3.5rem;
 }
 
-/* .head-1 {
+.head-1 {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+    width: 100%;
+}
 
-} */
-
-/* .head-2 {
-
-} */
+.head-2 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80px;
+    margin-top: 0px;
+    width: 100%;
+}
 
 .holder-2 {
     width: 45%;
-    background-color: yellowgreen;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -295,7 +304,31 @@
     font-weight: 500;
 }
 
+.holder-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
 
+.main-watch {
+    max-width: 80%;
+}
+
+.color-indicator {
+    margin-bottom: 4rem;
+}
+
+.holder-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.secondary-watches {
+    margin-right: 25px;
+}
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
     .side-menu {
@@ -317,6 +350,7 @@
     }
     .main-div {
         margin-bottom: 80px;
+        max-width: 100%;
     }
     .social-holder {
         flex-direction: row;
@@ -341,14 +375,43 @@
     #search-bar {
         width: 170px;
     }
-    .main-div-content {
+    .div-holder {
         flex-direction: column;
     }
     .holder-1 {
-        width: 100%;
+        width: calc(100% - 56px);
+        margin-left: 0;
+        padding-left: 3rem;
     }
     .holder-2 {
         width: 100%;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .holder-3 {
+        width: 100%;
+        justify-content: center;
+    }
+    /* .color-indicator {
+        display: none;
+    } */
+    .head-1 {
+        font-size: 35px;
+        line-height: 50px;
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+    .head-2 {
+        font-size: 35px;
+        line-height: 50px;
+        margin-top: 0px;
+    }
+    .buy-btn {
+        font-size: 20px;
+        padding: 1rem 2.5rem;
+    }
+    .holder-4 {
+        display: none;
     }
 }
 
@@ -402,6 +465,12 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .holder-4 {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     #link-1 {
         left: 28%;
@@ -411,6 +480,21 @@
     }
     #search-bar {
         width: 240px;
+    }
+    .head-1 {
+        font-size: 54px;
+        line-height: 75px;
+        margin-bottom: 5px;
+        padding-bottom: 0;
+    }
+    .head-2 {
+        font-size: 54px;
+        line-height: 75px;
+        margin-top: 0px;
+    }
+    .buy-btn {
+        font-size: 24px;
+        padding: 1rem 3rem;
     }
 }
 
@@ -450,3 +534,8 @@
         display: block;
     }
 }
+
+
+
+
+
