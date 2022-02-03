@@ -10,9 +10,7 @@ export default function Nav_bar() {
 
     const searchBarChangeHandler = () => {
         setSearchBarOpen(!searchBarOpen);
-        console.log("changed");
     }
-    console.log("ran");
 
     return (
         <nav className="desktop-nav-bar">
