@@ -378,9 +378,10 @@
     }
     .right-side-nav {
         margin-right: 2.2rem;
+        right: -5%;
     }
     #search-bar {
-        width: 170px;
+        width: 140px;
     }
     .div-holder {
         flex-direction: column;
@@ -416,6 +417,9 @@
     }
     .holder-4 {
         display: none;
+    }
+    .main-logo-div {
+        margin-left: 2rem;
     }
 }
 
