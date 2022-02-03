@@ -169,15 +169,15 @@
     top: -45px;
 }
 #link-3 {
-    left: 66%;
+    left: 65%;
     top: -45px;
 }
 #link-4 {
-    left: 86%;
+    left: 85%;
     top: -45px;
 }
 #link-5 {
-    left: 110%;
+    left: 108%;
     top: -45px;
 }
 
@@ -192,6 +192,8 @@
     display: flex;
     flex-direction: row;
     margin-right: 4rem;
+    margin-top: 8px;
+    height: max-content;
 }
 
 .right-icons {
@@ -199,7 +201,7 @@
     border: none;
     outline: none;
     font-size: 22px;
-    margin-top: 8px;
+    padding-top: 8px;
 }
 
 .main-logo-div {
@@ -209,23 +211,90 @@
 }
 
 #search-bar {
-    background-color: cornflowerblue;
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 9999px 0 0 9999px;
+    width: 270px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 17px;
+    height: 33px;
+}
+
+.search-active {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #search-icon {
-    padding-right: 16px;
-    
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#search-icon-btn {
+    margin-right: 10px;
+    height: 100%;
+    border-radius: 0 9999px 9999px 0;
 }
 
 #bag-icon {
-    border-left: rgba(255, 255, 255, 0.70) 2px solid;
+    border-left: rgba(255, 255, 255, 0.70) 3px solid;
     padding: 0 22px;
+    margin-top: 7px;
+    padding-top: 3px;
+    height: max-content;
 }
+
+/* #bag-search-active {
+    background-color: yellow;
+} */
 
 .nav-holder {
     display: flex;
 }
+
+
+
+.main-div-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: tomato;
+}
+
+.holder-1 {
+    width: 55%;
+    background-color: violet;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* .head-1 {
+
+} */
+
+/* .head-2 {
+
+} */
+
+.holder-2 {
+    width: 45%;
+    background-color: yellowgreen;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.buy-btn {
+    background-color: rgba(255, 255, 255, 0);
+    border: 3px solid white;
+    font-size: 24px;
+    border-radius: 9999px;
+    padding: 1rem 4.3rem;
+    color: white;
+    font-weight: 500;
+}
+
 
 
 @media screen and (min-width: 600px) and (max-width: 768px) {
@@ -235,7 +304,7 @@
 }
 
 /* Apply for screen smaller than 767 px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .App {
         flex-direction: column-reverse;
     }
@@ -268,6 +337,18 @@
     }
     .right-side-nav {
         margin-right: 2.2rem;
+    }
+    #search-bar {
+        width: 170px;
+    }
+    .main-div-content {
+        flex-direction: column;
+    }
+    .holder-1 {
+        width: 100%;
+    }
+    .holder-2 {
+        width: 100%;
     }
 }
 
@@ -302,19 +383,36 @@
         padding: 0.5rem 1.2rem;
     }
     .right-side-nav {
-        margin-right: 2.7rem;
+        margin-right: 2rem;
     }
     .main-logo-div {
         margin-left: 2rem;
     }
+    #search-bar {
+        width: 220px;
+    }
+    #link-3 {
+        display: none;
+    }
     #link-4 {
-        left: 88%;
+        display: none;
     }
     #link-5 {
-        left: 116%;
+        display: none;
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #link-1 {
+        left: 28%;
+    }
+    #link-2 {
+        left: 48%;
+    }
+    #search-bar {
+        width: 240px;
+    }
+}
 
 @media screen and (min-width: 1024px) {
     .desktop-nav-links {
@@ -330,13 +428,25 @@
     .desktop-nav-links-2 {
         padding: 0.5rem 2rem;
     }
+    #search-bar {
+        width: 230px;
+    }
+    #link-3 {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1280px) {
     .main-logo-div {
-        margin-left: 5rem;
+        margin-left: 4.5rem;
     }
-    
+    #search-bar {
+        width: 270px;
+    }
+    #link-4 {
+        display: block;
+    }
+    #link-5 {
+        display: block;
+    }
 }
-
-
