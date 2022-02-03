@@ -23,14 +23,14 @@ export default function Nav_bar() {
                 <div className="desktop-link-holder">
                     {/* Desktop menu */}
                     <a
-                        href="#"
+                        href="https://virtual99.netlify.app/"
                         id="link-1"
                         className="desktop-nav-links absolute md:block"
                         aria-current="page"
                         >Mac
                     </a>
                     <a
-                        href="#"
+                        href="https://virtual99.netlify.app/"
                         id="link-2"
                         className="desktop-nav-links absolute"
                         >iPhone
@@ -42,13 +42,13 @@ export default function Nav_bar() {
                             :
                                 <>
                                     <a
-                                        href="#"
+                                        href="https://virtual99.netlify.app/"
                                         id="link-3"
                                         className="desktop-nav-links absolute"
                                         >iPad
                                     </a>
                                     <a
-                                        href="#"
+                                        href="https://virtual99.netlify.app/"
                                         id="link-4"
                                         className="desktop-nav-links-2 absolute"
                                         >iWatch
@@ -62,7 +62,7 @@ export default function Nav_bar() {
                                 "" 
                             :
                             <a
-                                href="#"
+                                href="https://virtual99.netlify.app/"
                                 id="link-5"
                                 className="desktop-nav-links absolute"
                                 >Support
