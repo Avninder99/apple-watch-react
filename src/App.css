@@ -331,6 +331,12 @@
     margin-right: 25px;
 }
 
+.page-indicator {
+    position: absolute;
+    padding-left: 50px;
+    bottom: 1rem;
+}
+
 @media screen and (min-width: 600px) and (max-width: 768px) {
     .side-menu {
         width: 60%;
@@ -393,9 +399,6 @@
         width: 100%;
         justify-content: center;
     }
-    /* .color-indicator {
-        display: none;
-    } */
     .head-1 {
         font-size: 35px;
         line-height: 50px;
@@ -468,6 +471,9 @@
 
 @media screen and (max-width: 900px) {
     .holder-4 {
+        display: none;
+    }
+    .page-indicator {
         display: none;
     }
 }

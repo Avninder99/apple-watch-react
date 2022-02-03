@@ -3,6 +3,7 @@ import MainContent from "./main_content"
 import b_watch from "./images/b_watch_2.svg";
 import g_watch from "./images/g_watch_2.svg";
 import r_watch from "./images/r_watch_2.svg";
+import page_indicator from "./images/page_indicator.svg";
 
 // Main Section Component
 export default function main_section() {
@@ -17,6 +18,7 @@ export default function main_section() {
                     <img className="secondary-watches" src={r_watch} alt="Rose Gold Varient"/>
                 </div>
             </div>
+            <img className="page-indicator" src={page_indicator} alt="Page indicator"/>
         </div>
     );
 }
